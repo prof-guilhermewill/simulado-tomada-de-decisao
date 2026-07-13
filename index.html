@@ -426,31 +426,6 @@ Com esta frota partimos pelo rio Tocantins, aproveitando-nos da enchente da marÃ
         let userData = {};
 
         // Renderizar Simulado
-        const quizContainer = document.getElementById('quiz-container');
-        subjects.forEach(sub => {
-            const section = document.createElement('div');
-            section.innerHTML = `
-                <div class="mb-6">
-                    <span class="subject-tag">${sub.name}</span>
-                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">${sub.html ?? sub.text}</div>
-                </div>
-            `;
-            
-            questions.filter(q => q.id >= sub.range[0] && q.id <= sub.range[1]).forEach(q => {
-                const qDiv = document.createElement('div');
-                qDiv.className = 'bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6';
-                qDiv.innerHTML = `
-                    <p class="font-bold mb-4">${q.id}. ${q.text}</p>
-                    <div class="flex flex-wrap gap-3">
-                        <button onclick="selectOption(${q.id}, 'C')" id="btn-${q.id}-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
-                        <button onclick="selectOption(${q.id}, 'E')" id="btn-${q.id}-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
-                        <button onclick="selectOption(${q.id}, 'B')" id="btn-${q.id}-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
-                    </div>
-                `;
-                section.appendChild(qDiv);
-            });
-            quizContainer.appendChild(section);
-        });
 
         function selectOption(qId, val) {
             userAnswers[qId] = val;
