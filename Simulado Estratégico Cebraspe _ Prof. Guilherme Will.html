@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///C:/Users/Guilherme%20Willemin/Documents/Codex/2026-07-13/fa/outputs/index.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado Estratégico Cebraspe | Prof. Guilherme Will</title>
+    <script src="./Simulado Estratégico Cebraspe _ Prof. Guilherme Will_files/saved_resource"></script>
+    <script src="./Simulado Estratégico Cebraspe _ Prof. Guilherme Will_files/chart.js.download"></script>
+    <link rel="stylesheet" href="./Simulado Estratégico Cebraspe _ Prof. Guilherme Will_files/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+        .option-btn { transition: all 0.2s ease; border: 2px solid #e2e8f0; }
+        .option-btn.selected-certo { background-color: #10b981; color: white; border-color: #059669; }
+        .option-btn.selected-errado { background-color: #ef4444; color: white; border-color: #dc2626; }
+        .option-btn.selected-branco { background-color: #94a3b8; color: white; border-color: #64748b; }
+        .step-content { display: none; }
+        .step-content.active { display: block; }
+        .subject-tag { background: #e2e8f0; color: #475569; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .support-table { width: 100%; max-width: 420px; margin: 1rem auto 0; border-collapse: collapse; font-style: normal; }
+        .support-table th, .support-table td { border: 1px solid #cbd5e1; padding: 0.4rem 0.65rem; text-align: left; }
+        .support-table th { background: #e2e8f0; font-weight: 700; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.relative{position:relative}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mr-2{margin-right:0.5rem}.mt-12{margin-top:3rem}.mb-10{margin-bottom:2.5rem}.mb-3{margin-bottom:0.75rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-4{margin-top:1rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-20{height:5rem}.h-24{height:6rem}.w-20{width:5rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-pre-line{white-space:pre-line}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-l-4{border-left-width:4px}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-fuchsia-500{--tw-gradient-from:#d946ef var(--tw-gradient-from-position);--tw-gradient-to:rgb(217 70 239 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-amber-500{--tw-gradient-to:#f59e0b var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-8{padding:2rem}.p-6{padding:1.5rem}.p-4{padding:1rem}.px-12{padding-left:3rem;padding-right:3rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-5xl{font-size:3rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.font-black{font-weight:900}.uppercase{text-transform:uppercase}.italic{font-style:italic}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-green-300{--tw-text-opacity:1;color:rgb(134 239 172 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:opacity-90:hover{opacity:0.9}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:flex-row{flex-direction:row}}@media (min-width: 768px){.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:p-12{padding:3rem}.md\:text-left{text-align:left}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}</style></head>
+<body class="text-slate-800">
+
+    <!-- HEADER -->
+    <header class="gradient-bg text-white py-6 px-4">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <img src="./Simulado Estratégico Cebraspe _ Prof. Guilherme Will_files/logo.jpg" alt="Logo do Professor Guilherme Will" class="w-20 h-20 rounded-full object-cover border-4 border-white/20 shadow-lg">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Simulado de Decisão Estratégica</h1>
+                    <p class="text-slate-300">Padrão Cebraspe: Uma errada anula uma certa.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="https://wa.me/5524999305490" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-bold px-5 py-3 rounded-xl transition">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+                <a href="https://instagram.com/willconcursos" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-fuchsia-500 to-amber-500 hover:opacity-90 text-white font-bold px-5 py-3 rounded-xl transition">
+                    <i class="fab fa-instagram mr-2"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        
+        <!-- STEP 1: IDENTIFICAÇÃO -->
+        <div id="step-1" class="step-content active bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i class="fas fa-user-circle text-blue-600"></i> Identificação Inicial
+            </h2>
+            <form id="form-id" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Nome Completo *</label>
+                    <input type="text" id="user-name" required="" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Como quer ser chamado?">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">E-mail *</label>
+                    <input type="email" id="user-email" required="" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Seu melhor e-mail">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Para quais concursos você está estudando? *</label>
+                    <textarea id="user-goals" required="" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition h-24" placeholder="Ex: Câmara dos Deputados, Senado, RFB..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
+                    INICIAR SIMULADO <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- STEP 2: SIMULADO -->
+        <div id="step-2" class="step-content">
+            <div id="quiz-container" class="space-y-12">
+                <!-- As questões serão inseridas via JS -->
+            <div>
+                <div class="mb-6">
+                    <span class="subject-tag">Português</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Carta LXV - Ao padre provincial do Brasil (1654)
+
+Com esta frota partimos pelo rio Tocantins, aproveitando-nos da enchente da maré, que só até aqui nos acompanhou, prometendo-nos muita felicidade na jornada. (...) À meia noite fizemos pabóca, que é a frase com que cá se chama o partir, corrompendo a palavra da terra, e nos dias seguintes passamos às praias da viração. Parecerá que se chamam assim por correr nelas vento fresco; mas a razão por que os portugueses lhe deram este nome é a que direi a V. Rev.ma. Nos meses de outubro e novembro, saem do mar e do rio do Pará grande quantidade de tartarugas, que vêm criar nos areais de algumas ilhas que pelo meio deste Tocantins estão lançadas. (...) A estas mesmas praias vem, no seu tempo, quase todo o Pará a fazer a pesca das tartarugas. (...) A carne é como a de carneiro, e se fazem dela os mesmos guisados, que mais parecem de carne que de pescado. Os ovos são como os de galinha na cor, e quase no sabor, a casca, mais branca, e de figura diferente, porque são redondos (...); e o modo como se faz esta pesca requer mais notícia que indústria, pela muita cautela e pouca resistência das tartarugas. Quando vêm a desembarcar nestas praias, trazem diante duas, como sentinelas, que vêm a espiar com muita pausa; logo depois destas, com bom espaço vêm oito ou dez, como descobridores do campo, e depois delas, em maior distância, vem todo o exército das tartarugas, que consta de muito milhares. Se as primeiras e as segundas sentem algum rumor, voltam para trás, e todas se somem num momento: por isso os que vêm à pesca se escondem todos atrás dos matos e esperam de emboscada com grande quietação e silêncio. Saem, pois, as duas primeiras espias, passeiam de alto a baixo toda a praia, e como estas acham o campo livre, saem também as da vanguarda, e fazem muito devagar a mesma vigia e, como dão a campanha por segura, entram à água e voltam, e depois dela sai toda a multidão do exército com os escudos às costas, e começam a cobrir as praias e correr em grande tropel para o mais alto delas. Aplica-se cada uma a fazer sua cova, e, quando já não saem mais e estão entretidas umas no trabalho, outras já na dor daquela ocupação, rebentam então os pescadores da emboscada, tomam a parte da praia e, remetendo as tartarugas, não fazem mais que ir virando e deixando, porque em estando viradas de costas não se podem mais bulir, e por isso estas praias e estas tartarugas se chamam de viração (...).</div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">1. No trecho "Nos meses de outubro e novembro, saem do mar e do rio do Pará grande quantidade de tartarugas, que vêm criar nos areais de algumas ilhas que pelo meio deste Tocantins estão lançadas", é facultada a flexão do verbo da primeira oração na terceira pessoa do singular, em concordância com o núcleo do sujeito posposto.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(1, &#39;C&#39;)" id="btn-1-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(1, &#39;E&#39;)" id="btn-1-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(1, &#39;B&#39;)" id="btn-1-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">2. Ao descrever a captura de tartarugas para consumo alimentar, na região do Pará, o autor recorre à linguagem metafórica pelo uso da expressão "toda a multidão do exército com os escudos às costas", para se referir aos artefatos usados pelos pescadores na emboscada.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(2, &#39;C&#39;)" id="btn-2-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(2, &#39;E&#39;)" id="btn-2-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(2, &#39;B&#39;)" id="btn-2-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">3. O texto pertence ao gênero epistolar, em que se sobressai a função conativa da linguagem, evidenciada pela interpelação do interlocutor por meio de expressão honorífica, bem como pelo uso de referenciação locativa orientada deiticamente pela relação com o interlocutor.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(3, &#39;C&#39;)" id="btn-3-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(3, &#39;E&#39;)" id="btn-3-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(3, &#39;B&#39;)" id="btn-3-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">4. A missiva em questão cumpre a dupla função de reportar os acontecimentos referentes à expedição em que se engaja o autor e de denunciar a destruição do meio ambiente causada pelas práticas adotadas pelos habitantes do território — indígenas e colonizadores — na captura de tartarugas.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(4, &#39;C&#39;)" id="btn-4-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(4, &#39;E&#39;)" id="btn-4-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(4, &#39;B&#39;)" id="btn-4-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">5. No período "Parecerá que se chamam assim por correr nelas vento fresco; mas a razão por que os portugueses lhe deram este nome é a que direi a V. Rev.ma.", a preposição "por" introduz oração subordinada adverbial causal nas duas ocorrências.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(5, &#39;C&#39;)" id="btn-5-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(5, &#39;E&#39;)" id="btn-5-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(5, &#39;B&#39;)" id="btn-5-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div><div>
+                <div class="mb-6">
+                    <span class="subject-tag">Inglês</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Electoral accountability is a distinctively democratic form of accountability. Since officials typically seek reelection or election to a higher office, this potential sanction is regarded as a powerful inducement for them to explain their actions to electorates and serve their electorates' interests. In this conventional view, much of the activity of elected officials takes place “in the shadow of elections,” with the awareness that potential opponents may publicize their actions, if these seem likely to be unpopular with their electorates. On the other hand, some recent work suggests that even in democracies, there is much less retrospective electoral accountability than the conventional view suggests. In a sense, this failure should not be surprising in light of democratic theory. Alexis de Tocqueville and John Stuart Mill emphasized in the mid-19th century the importance, for effective control of government, of alert and involved citizens. Alexis de Tocqueville observed that “the inhabitant of New England is attached to his township not so much because he was born there as because he sees in that township a free and strong corporation that he is a part of and that is worth his trouble to seek to direct.” Democracy, in Tocqueville's view, also relies on the existence of multiple voluntary associations, linked to political associations in multiple ways. In the words of John Stuart Mill, “the rights and interests of every or any person are only secure from being disregarded when the person is himself able, and habitually disposed, to stand up for them.”</div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">6. The passage “that he is a part of and that is worth his trouble to seek to direct” (in the fourth sentence of the second paragraph), describes the relationship between “the inhabitant of New England” and “a free and strong corporation”, which is “his township”.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(6, &#39;C&#39;)" id="btn-6-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(6, &#39;E&#39;)" id="btn-6-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(6, &#39;B&#39;)" id="btn-6-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">7. As used in the text, the expression “in the shadow of elections” (in the third sentence of the first paragraph) indicates that the activity of elected officials is influenced by their interest in the next election results.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(7, &#39;C&#39;)" id="btn-7-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(7, &#39;E&#39;)" id="btn-7-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(7, &#39;B&#39;)" id="btn-7-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div><div>
+                <div class="mb-6">
+                    <span class="subject-tag">Raciocínio Lógico</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Duas comissões de avaliação serão formadas na Câmara dos Deputados — a comissão CP e a comissão CQ. A comissão CP deverá ser formada obrigatoriamente por exatos 5 membros, em que 2 devem ser deputados do partido A, 2 devem ser deputados do Partido B e 1 deve ser deputado do partido R. Por outro lado, a comissão CQ pode ser formada ou com 5 membros ou com apenas 4 membros, em casos de urgência. No caso de a comissão CQ ser formada por 5 membros, ela deverá ter 3 membros do partido S, 1 membro do partido Y e 1 membro do partido Z. Caso a comissão CQ seja formada por 4 membros, deverão ser escolhidos 2 do partido S e 2 do partido Y. A quantidade de deputados disponíveis de cada partido para compor as comissões consta na tabela a seguir.
+                <table class="support-table"><thead><tr><th>Bancada</th><th>Partido</th><th>Quantidade</th></tr></thead><tbody><tr><td>Governamental</td><td>A</td><td>4</td></tr><tr><td>Governamental</td><td>B</td><td>5</td></tr><tr><td>Independente</td><td>R</td><td>8</td></tr><tr><td>Independente</td><td>S</td><td>5</td></tr><tr><td>Oposição</td><td>Y</td><td>4</td></tr><tr><td>Oposição</td><td>Z</td><td>6</td></tr></tbody></table>
+                <p class="mt-4">Dos projetos que chegam à Câmara dos Deputados para avaliação, 65% exigem a formação de uma comissão CP e 35% exigem uma comissão CQ. Além dessas comissões, em situações especiais, o presidente da Câmara dos Deputados pode solicitar a formação de grupos de trabalho formados por membros da bancada governamental (partidos A e B), membros da bancada independente (partidos R e S) e membros da bancada de oposição (partidos Y e Z), devendo esses grupos de trabalho ter, pelo menos, um membro de cada bancada e, no máximo, 11 membros.</p><p class="mt-4">Com base nessa situação hipotética, julgue o item seguinte.</p></div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">8. O número total de formas distintas de se definirem as quantidades de membros de cada bancada que podem compor o grupo de trabalho técnico é 165.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(8, &#39;C&#39;)" id="btn-8-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(8, &#39;E&#39;)" id="btn-8-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(8, &#39;B&#39;)" id="btn-8-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div><div>
+                <div class="mb-6">
+                    <span class="subject-tag">Estatística</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Uma comissão da Câmara dos Deputados está analisando a distribuição de salários de determinada categoria funcional no Brasil. Durante um primeiro estudo promovido pelos deputados, um pesquisador calculou as médias, os desvios padrões e padronizou os valores dos salários brasileiros, para uma amostra de profissionais, com o intuito de comparar o desempenho salarial entre diferentes países. Esse pesquisador observou que, no Brasil, o salário médio dessa categoria é de R$ 6.000 com desvio padrão de R$ 800, enquanto, em outro país — P —, usado na comparação, o valor tabelado, em dólar, do salário médio dessa mesma categoria é $ 3.500 e o desvio padrão é $ 250.</div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">9. Se o referido pesquisador tivesse escolhido uma nova amostra de trabalhadores 9 vezes maior que a do primeiro estudo, o erro padrão seria reduzido a um terço, caso fossem considerados os mesmos valores para o desvio padrão e a média do estudo inicial.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(9, &#39;C&#39;)" id="btn-9-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(9, &#39;E&#39;)" id="btn-9-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(9, &#39;B&#39;)" id="btn-9-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">10. Se, no seu relatório, a comissão decidir aprovar um aumento de R$ 750 para todos os funcionários da referida categoria funcional no Brasil, a média dos salários irá aumentar, assim como o desvio padrão e a variância dos salários de todos os trabalhadores dessa categoria.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(10, &#39;C&#39;)" id="btn-10-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(10, &#39;E&#39;)" id="btn-10-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(10, &#39;B&#39;)" id="btn-10-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div><div>
+                <div class="mb-6">
+                    <span class="subject-tag">TI / Informática</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Os itens a seguir não possuem texto de apoio adicional no documento original.</div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">11. Em navegadores web comuns, como Google Chrome ou Microsoft Edge, o modo anônimo protege a navegação na darkweb, sem que nenhum registro dos sites acessados e das informações transitadas seja rastreável por outros usuários da darkweb.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(11, &#39;C&#39;)" id="btn-11-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(11, &#39;E&#39;)" id="btn-11-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(11, &#39;B&#39;)" id="btn-11-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">12. Ferramentas de EDR (endpoint detection and response) identificam atividades suspeitas em computadores e servidores e sinalizam aos analistas para que estes acionem os procedimentos de segurança necessários, o que deve ser feito manualmente.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(12, &#39;C&#39;)" id="btn-12-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(12, &#39;E&#39;)" id="btn-12-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(12, &#39;B&#39;)" id="btn-12-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">13. Por não possuírem um formato predefinido, dados não estruturados são mais simples de manipular que dados estruturados.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(13, &#39;C&#39;)" id="btn-13-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(13, &#39;E&#39;)" id="btn-13-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(13, &#39;B&#39;)" id="btn-13-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div><div>
+                <div class="mb-6">
+                    <span class="subject-tag">Direito Administrativo</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Os itens a seguir não possuem texto de apoio adicional no documento original.</div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">14. A aplicação de sanções no âmbito de processo administrativo poderá ser revista de ofício, a qualquer tempo, desde que surjam fatos novos ou circunstâncias relevantes suscetíveis de justificar a inadequação da sanção aplicada, sendo vedada a reformatio in pejus.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(14, &#39;C&#39;)" id="btn-14-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(14, &#39;E&#39;)" id="btn-14-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(14, &#39;B&#39;)" id="btn-14-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">15. As câmaras de vereadores, por serem desprovidas de personalidade jurídica própria, não possuem capacidade processual para propor ações judiciais, cabendo exclusivamente às pessoas jurídicas de direito público a defesa dos seus direitos institucionais.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(15, &#39;C&#39;)" id="btn-15-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(15, &#39;E&#39;)" id="btn-15-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(15, &#39;B&#39;)" id="btn-15-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">16. A decisão de recursos administrativos pode ser objeto de delegação de competência, conforme a conveniência e a oportunidade, em razão de circunstâncias de cunho técnico e jurídico.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(16, &#39;C&#39;)" id="btn-16-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(16, &#39;E&#39;)" id="btn-16-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(16, &#39;B&#39;)" id="btn-16-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div><div>
+                <div class="mb-6">
+                    <span class="subject-tag">Direito Constitucional</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">Os itens a seguir não possuem texto de apoio adicional no documento original.</div>
+                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">17. A aplicação da penalidade de cassação de aposentadoria ou disponibilidade de servidor é compatível com o caráter contributivo e solidário do regime próprio de previdência dos servidores públicos.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(17, &#39;C&#39;)" id="btn-17-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(17, &#39;E&#39;)" id="btn-17-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(17, &#39;B&#39;)" id="btn-17-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">18. Os estados-membros podem legitimamente disciplinar as carreiras de peritos de natureza criminal e seu regime jurídico para atender às suas peculiaridades.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(18, &#39;C&#39;)" id="btn-18-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(18, &#39;E&#39;)" id="btn-18-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(18, &#39;B&#39;)" id="btn-18-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">19. É cabível o trancamento da ação penal por meio de habeas corpus, admitido diante de situações excepcionalíssimas, como quando constatada, de plano, ausência de justa causa para a propositura da ação penal.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(19, &#39;C&#39;)" id="btn-19-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(19, &#39;E&#39;)" id="btn-19-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(19, &#39;B&#39;)" id="btn-19-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div><div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <p class="font-bold mb-4">20. Área comum do pátio de uma pousada não é abrangida pela proteção conferida pela cláusula da inviolabilidade domiciliar.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(20, &#39;C&#39;)" id="btn-20-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(20, &#39;E&#39;)" id="btn-20-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(20, &#39;B&#39;)" id="btn-20-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                </div></div></div>
+            <div class="mt-12 text-center">
+                <button onclick="submitQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-12 py-5 rounded-2xl shadow-2xl transition transform hover:scale-105">
+                    FINALIZAR E ENVIAR RESPOSTAS <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- STEP 3: COMPORTAMENTAL -->
+        <div id="step-3" class="step-content bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+            <h2 class="text-2xl font-bold mb-2 text-center">Quase lá...</h2>
+            <p class="text-center text-slate-500 mb-8">Antes de liberar seu resultado, responda rapidamente:</p>
+            
+            <div class="space-y-8">
+                <div class="behavior-q">
+                    <p class="font-semibold mb-4 text-lg">1. Você realizou as questões 1 a 20 exatamente nessa ordem ou adotou alguma ordem de resolução diferente?</p>
+                    <div class="flex gap-4">
+                        <button onclick="setBehavior(1, &#39;Exata Ordem&#39;, this)" class="behavior-btn-1 flex-1 py-3 rounded-xl border-2 border-slate-200 font-bold hover:bg-slate-50 transition">EXATA ORDEM</button>
+                        <button onclick="setBehavior(1, &#39;Ordem Diferente&#39;, this)" class="behavior-btn-1 flex-1 py-3 rounded-xl border-2 border-slate-200 font-bold hover:bg-slate-50 transition">ORDEM DIFERENTE</button>
+                    </div>
+                </div>
+
+                <div class="behavior-q">
+                    <p class="font-semibold mb-4 text-lg">2. Você focou apenas em responder à questão ou foi influenciado pelas respostas que você deu anteriormente?</p>
+                    <div class="flex gap-4">
+                        <button onclick="setBehavior(2, &#39;Apenas na Questão&#39;, this)" class="behavior-btn-2 flex-1 py-3 rounded-xl border-2 border-slate-200 font-bold hover:bg-slate-50 transition">APENAS NA QUESTÃO</button>
+                        <button onclick="setBehavior(2, &#39;Influenciado&#39;, this)" class="behavior-btn-2 flex-1 py-3 rounded-xl border-2 border-slate-200 font-bold hover:bg-slate-50 transition">FOI INFLUENCIADO</button>
+                    </div>
+                </div>
+
+                <div class="behavior-q">
+                    <p class="font-semibold mb-4 text-lg">3. Você se sentiu desconfortável em algum momento do simulado (longos textos ou cálculos)?</p>
+                    <div class="flex gap-4">
+                        <button onclick="setBehavior(3, &#39;Sim, Desconfortável&#39;, this)" class="behavior-btn-3 flex-1 py-3 rounded-xl border-2 border-slate-200 font-bold hover:bg-slate-50 transition">SIM, DESCONFORTO</button>
+                        <button onclick="setBehavior(3, &#39;Não, Tranquilo&#39;, this)" class="behavior-btn-3 flex-1 py-3 rounded-xl border-2 border-slate-200 font-bold hover:bg-slate-50 transition">NÃO, TRANQUILO</button>
+                    </div>
+                </div>
+
+                <div class="behavior-q">
+                    <label for="time-minutes" class="block font-semibold mb-2 text-lg">4. Quantos minutos você demorou para finalizar o simulado?</label>
+                    <input type="number" id="time-minutes" min="1" step="1" required="" inputmode="numeric" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Ex.: 75">
+                </div>
+            </div>
+
+            <button onclick="showResults()" class="w-full mt-10 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
+                VER MEU DESEMPENHO <i class="fas fa-chart-line ml-2"></i>
+            </button>
+        </div>
+
+        <!-- STEP 4: DASHBOARD -->
+        <div id="step-4" class="step-content space-y-8">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 text-center">
+                <h2 class="text-3xl font-bold mb-6">Seu Resultado Global</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="p-6 bg-blue-50 rounded-2xl">
+                        <p class="text-sm text-blue-600 font-bold uppercase">Nota Líquida</p>
+                        <p id="score-liquid" class="text-5xl font-black text-blue-900">0</p>
+                    </div>
+                    <div class="p-6 bg-green-50 rounded-2xl">
+                        <p class="text-sm text-green-600 font-bold uppercase">Aproveitamento</p>
+                        <p id="score-percent" class="text-5xl font-black text-green-900">0%</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl">
+                        <p class="text-sm text-slate-500 font-bold uppercase">Status</p>
+                        <p id="score-status" class="text-xl font-bold text-slate-700">Calculando...</p>
+                    </div>
+                </div>
+                <div class="max-w-md mx-auto">
+                    <canvas id="subjectChart"></canvas>
+                </div>
+            </div>
+
+            <!-- CONVITE -->
+            <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-500 text-white px-4 py-1 rounded-full text-xs font-black uppercase">Treinamento gratuito</span>
+                        <span class="bg-amber-500 text-black px-4 py-1 rounded-full text-xs font-black uppercase">Vagas limitadas</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black mb-4">DECISÃO INTELIGENTE: o guia prático para manter a clareza sob pressão, evitar erros e aumentar sua nota.</h2>
+                    <p class="text-green-300 font-bold mb-3">Participação 100% gratuita - garanta sua vaga.</p>
+                    <p class="text-amber-400 font-bold text-xl mb-8">Sexta-feira, 17 de Julho</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 text-left">
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <p><strong>Videoaulas curtas:</strong> Direto ao ponto, respeitando seu tempo.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <p><strong>Rápido:</strong> você consegue assistir tudo numa manhã de sábado.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <p><strong>Prática Pura:</strong> Teoria mínima, foco em aplicar.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <p><strong>Estratégia Cebraspe:</strong> Estruturas técnicas e mentais para não cair.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-400 italic mb-8">Bônus e outras surpresas exclusivas.</p>
+                    
+                    <a id="whatsapp-link" href="https://wa.me/5524999305490" target="_blank" rel="noopener noreferrer" class="inline-block w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-xl transition transform hover:scale-105 text-center">
+                        <i class="fab fa-whatsapp mr-2"></i> ENVIAR RESULTADO E GARANTIR VAGA
+                    </a>
+                </div>
+            </div>
+
+            <!-- GABARITO COMENTADO -->
+            <div id="gabarito-section" class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+                <h3 class="text-2xl font-bold mb-8">Gabarito Comentado</h3>
+                <div id="gabarito-list" class="space-y-6">
+                    <!-- JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const subjects = [
+            {
+                name: 'Português', range: [1, 5], text: `Carta LXV - Ao padre provincial do Brasil (1654)
+
+Com esta frota partimos pelo rio Tocantins, aproveitando-nos da enchente da maré, que só até aqui nos acompanhou, prometendo-nos muita felicidade na jornada. (...) À meia noite fizemos pabóca, que é a frase com que cá se chama o partir, corrompendo a palavra da terra, e nos dias seguintes passamos às praias da viração. Parecerá que se chamam assim por correr nelas vento fresco; mas a razão por que os portugueses lhe deram este nome é a que direi a V. Rev.ma. Nos meses de outubro e novembro, saem do mar e do rio do Pará grande quantidade de tartarugas, que vêm criar nos areais de algumas ilhas que pelo meio deste Tocantins estão lançadas. (...) A estas mesmas praias vem, no seu tempo, quase todo o Pará a fazer a pesca das tartarugas. (...) A carne é como a de carneiro, e se fazem dela os mesmos guisados, que mais parecem de carne que de pescado. Os ovos são como os de galinha na cor, e quase no sabor, a casca, mais branca, e de figura diferente, porque são redondos (...); e o modo como se faz esta pesca requer mais notícia que indústria, pela muita cautela e pouca resistência das tartarugas. Quando vêm a desembarcar nestas praias, trazem diante duas, como sentinelas, que vêm a espiar com muita pausa; logo depois destas, com bom espaço vêm oito ou dez, como descobridores do campo, e depois delas, em maior distância, vem todo o exército das tartarugas, que consta de muito milhares. Se as primeiras e as segundas sentem algum rumor, voltam para trás, e todas se somem num momento: por isso os que vêm à pesca se escondem todos atrás dos matos e esperam de emboscada com grande quietação e silêncio. Saem, pois, as duas primeiras espias, passeiam de alto a baixo toda a praia, e como estas acham o campo livre, saem também as da vanguarda, e fazem muito devagar a mesma vigia e, como dão a campanha por segura, entram à água e voltam, e depois dela sai toda a multidão do exército com os escudos às costas, e começam a cobrir as praias e correr em grande tropel para o mais alto delas. Aplica-se cada uma a fazer sua cova, e, quando já não saem mais e estão entretidas umas no trabalho, outras já na dor daquela ocupação, rebentam então os pescadores da emboscada, tomam a parte da praia e, remetendo as tartarugas, não fazem mais que ir virando e deixando, porque em estando viradas de costas não se podem mais bulir, e por isso estas praias e estas tartarugas se chamam de viração (...).`
+            },
+            {
+                name: 'Inglês', range: [6, 7], text: `Electoral accountability is a distinctively democratic form of accountability. Since officials typically seek reelection or election to a higher office, this potential sanction is regarded as a powerful inducement for them to explain their actions to electorates and serve their electorates' interests. In this conventional view, much of the activity of elected officials takes place “in the shadow of elections,” with the awareness that potential opponents may publicize their actions, if these seem likely to be unpopular with their electorates. On the other hand, some recent work suggests that even in democracies, there is much less retrospective electoral accountability than the conventional view suggests. In a sense, this failure should not be surprising in light of democratic theory. Alexis de Tocqueville and John Stuart Mill emphasized in the mid-19th century the importance, for effective control of government, of alert and involved citizens. Alexis de Tocqueville observed that “the inhabitant of New England is attached to his township not so much because he was born there as because he sees in that township a free and strong corporation that he is a part of and that is worth his trouble to seek to direct.” Democracy, in Tocqueville's view, also relies on the existence of multiple voluntary associations, linked to political associations in multiple ways. In the words of John Stuart Mill, “the rights and interests of every or any person are only secure from being disregarded when the person is himself able, and habitually disposed, to stand up for them.”`
+            },
+            {
+                name: 'Raciocínio Lógico', range: [8, 8], html: `Duas comissões de avaliação serão formadas na Câmara dos Deputados — a comissão CP e a comissão CQ. A comissão CP deverá ser formada obrigatoriamente por exatos 5 membros, em que 2 devem ser deputados do partido A, 2 devem ser deputados do Partido B e 1 deve ser deputado do partido R. Por outro lado, a comissão CQ pode ser formada ou com 5 membros ou com apenas 4 membros, em casos de urgência. No caso de a comissão CQ ser formada por 5 membros, ela deverá ter 3 membros do partido S, 1 membro do partido Y e 1 membro do partido Z. Caso a comissão CQ seja formada por 4 membros, deverão ser escolhidos 2 do partido S e 2 do partido Y. A quantidade de deputados disponíveis de cada partido para compor as comissões consta na tabela a seguir.
+                <table class="support-table"><thead><tr><th>Bancada</th><th>Partido</th><th>Quantidade</th></tr></thead><tbody><tr><td>Governamental</td><td>A</td><td>4</td></tr><tr><td>Governamental</td><td>B</td><td>5</td></tr><tr><td>Independente</td><td>R</td><td>8</td></tr><tr><td>Independente</td><td>S</td><td>5</td></tr><tr><td>Oposição</td><td>Y</td><td>4</td></tr><tr><td>Oposição</td><td>Z</td><td>6</td></tr></tbody></table>
+                <p class="mt-4">Dos projetos que chegam à Câmara dos Deputados para avaliação, 65% exigem a formação de uma comissão CP e 35% exigem uma comissão CQ. Além dessas comissões, em situações especiais, o presidente da Câmara dos Deputados pode solicitar a formação de grupos de trabalho formados por membros da bancada governamental (partidos A e B), membros da bancada independente (partidos R e S) e membros da bancada de oposição (partidos Y e Z), devendo esses grupos de trabalho ter, pelo menos, um membro de cada bancada e, no máximo, 11 membros.</p><p class="mt-4">Com base nessa situação hipotética, julgue o item seguinte.</p>`
+            },
+            {
+                name: 'Estatística', range: [9, 10], text: `Uma comissão da Câmara dos Deputados está analisando a distribuição de salários de determinada categoria funcional no Brasil. Durante um primeiro estudo promovido pelos deputados, um pesquisador calculou as médias, os desvios padrões e padronizou os valores dos salários brasileiros, para uma amostra de profissionais, com o intuito de comparar o desempenho salarial entre diferentes países. Esse pesquisador observou que, no Brasil, o salário médio dessa categoria é de R$ 6.000 com desvio padrão de R$ 800, enquanto, em outro país — P —, usado na comparação, o valor tabelado, em dólar, do salário médio dessa mesma categoria é $ 3.500 e o desvio padrão é $ 250.`
+            },
+            { name: 'TI / Informática', range: [11, 13], text: 'Os itens a seguir não possuem texto de apoio adicional no documento original.' },
+            { name: 'Direito Administrativo', range: [14, 16], text: 'Os itens a seguir não possuem texto de apoio adicional no documento original.' },
+            { name: 'Direito Constitucional', range: [17, 20], text: 'Os itens a seguir não possuem texto de apoio adicional no documento original.' }
+        ];
+
+        const questions = [
+            { id: 1, text: 'No trecho "Nos meses de outubro e novembro, saem do mar e do rio do Pará grande quantidade de tartarugas, que vêm criar nos areais de algumas ilhas que pelo meio deste Tocantins estão lançadas", é facultada a flexão do verbo da primeira oração na terceira pessoa do singular, em concordância com o núcleo do sujeito posposto.', ans: 'C', exp: 'O termo "grande quantidade de tartarugas" é um sujeito coletivo partitivo. Permite concordância com o núcleo "quantidade" (singular) ou com o especificador "tartarugas" (plural).' },
+            { id: 2, text: 'Ao descrever a captura de tartarugas para consumo alimentar, na região do Pará, o autor recorre à linguagem metafórica pelo uso da expressão "toda a multidão do exército com os escudos às costas", para se referir aos artefatos usados pelos pescadores na emboscada.', ans: 'E', exp: 'A metáfora refere-se às próprias tartarugas e suas carapaças subindo a praia, não a ferramentas dos pescadores.' },
+            { id: 3, text: 'O texto pertence ao gênero epistolar, em que se sobressai a função conativa da linguagem, evidenciada pela interpelação do interlocutor por meio de expressão honorífica, bem como pelo uso de referenciação locativa orientada deiticamente pela relação com o interlocutor.', ans: 'C', exp: 'O texto é uma carta marcada pelo vocativo honorífico "V. Rev.ma." e dêixis locativa.' },
+            { id: 4, text: 'A missiva em questão cumpre a dupla função de reportar os acontecimentos referentes à expedição em que se engaja o autor e de denunciar a destruição do meio ambiente causada pelas práticas adotadas pelos habitantes do território — indígenas e colonizadores — na captura de tartarugas.', ans: 'E', exp: 'O texto de 1654 é uma crônica de viagem. Não há o conceito moderno de "denúncia ambiental" naquela época.' },
+            { id: 5, text: 'No período "Parecerá que se chamam assim por correr nelas vento fresco; mas a razão por que os portugueses lhe deram este nome é a que direi a V. Rev.ma.", a preposição "por" introduz oração subordinada adverbial causal nas duas ocorrências.', ans: 'E', exp: 'Apenas a primeira ocorrência é causal. Na segunda, "por que" é preposição + pronome relativo introduzindo oração adjetiva.' },
+            { id: 6, text: 'The passage “that he is a part of and that is worth his trouble to seek to direct” (in the fourth sentence of the second paragraph), describes the relationship between “the inhabitant of New England” and “a free and strong corporation”, which is “his township”.', ans: 'C', exp: 'The relative pronoun "that" refers back to "township", indicating the inhabitant\'s involvement in its direction.' },
+            { id: 7, text: 'As used in the text, the expression “in the shadow of elections” (in the third sentence of the first paragraph) indicates that the activity of elected officials is influenced by their interest in the next election results.', ans: 'C', exp: 'Idiomatic expression meaning that the proximity of elections shapes political behavior.' },
+            { id: 8, text: 'O número total de formas distintas de se definirem as quantidades de membros de cada bancada que podem compor o grupo de trabalho técnico é 165.', ans: 'C', exp: 'Cálculo de análise combinatória considerando as restrições de mínimo e máximo de membros por bancada.' },
+            { id: 9, text: 'Se o referido pesquisador tivesse escolhido uma nova amostra de trabalhadores 9 vezes maior que a do primeiro estudo, o erro padrão seria reduzido a um terço, caso fossem considerados os mesmos valores para o desvio padrão e a média do estudo inicial.', ans: 'C', exp: 'O erro padrão é inversamente proporcional à raiz quadrada do tamanho da amostra (√9 = 3).' },
+            { id: 10, text: 'Se, no seu relatório, a comissão decidir aprovar um aumento de R$ 750 para todos os funcionários da referida categoria funcional no Brasil, a média dos salários irá aumentar, assim como o desvio padrão e a variância dos salários de todos os trabalhadores dessa categoria.', ans: 'E', exp: 'Somar uma constante altera a média, mas não altera as medidas de dispersão (desvio padrão e variância).' },
+            { id: 11, text: 'Em navegadores web comuns, como Google Chrome ou Microsoft Edge, o modo anônimo protege a navegação na darkweb, sem que nenhum registro dos sites acessados e das informações transitadas seja rastreável por outros usuários da darkweb.', ans: 'E', exp: 'Modo anônimo apenas não salva histórico local. Não acessa Darkweb nem mascara tráfego de rede.' },
+            { id: 12, text: 'Ferramentas de EDR (endpoint detection and response) identificam atividades suspeitas em computadores e servidores e sinalizam aos analistas para que estes acionem os procedimentos de segurança necessários, o que deve ser feito manualmente.', ans: 'E', exp: 'EDRs modernos possuem automação e podem executar ações de resposta sem intervenção humana imediata.' },
+            { id: 13, text: 'Por não possuírem um formato predefinido, dados não estruturados são mais simples de manipular que dados estruturados.', ans: 'E', exp: 'Dados não estruturados são muito mais complexos de processar e analisar que dados tabulares.' },
+            { id: 14, text: 'A aplicação de sanções no âmbito de processo administrativo poderá ser revista de ofício, a qualquer tempo, desde que surjam fatos novos ou circunstâncias relevantes suscetíveis de justificar a inadequação da sanção aplicada, sendo vedada a reformatio in pejus.', ans: 'C', exp: 'Literalidade do Art. 65 da Lei 9.784/99.' },
+            { id: 15, text: 'As câmaras de vereadores, por serem desprovidas de personalidade jurídica própria, não possuem capacidade processual para propor ações judiciais, cabendo exclusivamente às pessoas jurídicas de direito público a defesa dos seus direitos institucionais.', ans: 'E', exp: 'Possuem "personalidade judiciária" para defender suas prerrogativas institucionais em juízo.' },
+            { id: 16, text: 'A decisão de recursos administrativos pode ser objeto de delegação de competência, conforme a conveniência e a oportunidade, em razão de circunstâncias de cunho técnico e jurídico.', ans: 'E', exp: 'A decisão de recursos é competência indelegável conforme Art. 11 da Lei 9.784/99.' },
+            { id: 17, text: 'A aplicação da penalidade de cassação de aposentadoria ou disponibilidade de servidor é compatível com o caráter contributivo e solidário do regime próprio de previdência dos servidores públicos.', ans: 'C', exp: 'Jurisprudência consolidada do STF pela constitucionalidade da cassação de aposentadoria.' },
+            { id: 18, text: 'Os estados-membros podem legitimamente disciplinar as carreiras de peritos de natureza criminal e seu regime jurídico para atender às suas peculiaridades.', ans: 'C', exp: 'Autonomia federativa garantida pela CF para estruturação de polícias e carreiras de perícia.' },
+            { id: 19, text: 'É cabível o trancamento da ação penal por meio de habeas corpus, admitido diante de situações excepcionalíssimas, como quando constatada, de plano, ausência de justa causa para a propositura da ação penal.', ans: 'C', exp: 'Medida excepcional admitida quando a falta de justa causa é evidente e imediata.' },
+            { id: 20, text: 'Área comum do pátio de uma pousada não é abrangida pela proteção conferida pela cláusula da inviolabilidade domiciliar.', ans: 'C', exp: 'A proteção de domicílio não se estende a áreas externas de circulação comum em estabelecimentos comerciais.' }
+        ];
+
+        let userAnswers = {};
+        let behaviorData = {};
+        let userData = {};
+
+        // Renderizar Simulado
+        const quizContainer = document.getElementById('quiz-container');
+        subjects.forEach(sub => {
+            const section = document.createElement('div');
+            section.innerHTML = `
+                <div class="mb-6">
+                    <span class="subject-tag">${sub.name}</span>
+                    <div class="mt-4 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-sm text-slate-600 whitespace-pre-line">${sub.html ?? sub.text}</div>
+                </div>
+            `;
+            
+            questions.filter(q => q.id >= sub.range[0] && q.id <= sub.range[1]).forEach(q => {
+                const qDiv = document.createElement('div');
+                qDiv.className = 'bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6';
+                qDiv.innerHTML = `
+                    <p class="font-bold mb-4">${q.id}. ${q.text}</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="selectOption(${q.id}, 'C')" id="btn-${q.id}-C" class="option-btn flex-1 py-3 rounded-xl font-bold">CERTO</button>
+                        <button onclick="selectOption(${q.id}, 'E')" id="btn-${q.id}-E" class="option-btn flex-1 py-3 rounded-xl font-bold">ERRADO</button>
+                        <button onclick="selectOption(${q.id}, 'B')" id="btn-${q.id}-B" class="option-btn flex-1 py-3 rounded-xl font-bold text-slate-400">EM BRANCO</button>
+                    </div>
+                `;
+                section.appendChild(qDiv);
+            });
+            quizContainer.appendChild(section);
+        });
+
+        function selectOption(qId, val) {
+            userAnswers[qId] = val;
+            document.querySelectorAll(`#btn-${qId}-C, #btn-${qId}-E, #btn-${qId}-B`).forEach(b => {
+                b.classList.remove('selected-certo', 'selected-errado', 'selected-branco');
+            });
+            const btn = document.getElementById(`btn-${qId}-${val}`);
+            if(val === 'C') btn.classList.add('selected-certo');
+            else if(val === 'E') btn.classList.add('selected-errado');
+            else btn.classList.add('selected-branco');
+        }
+
+        document.getElementById('form-id').onsubmit = (e) => {
+            e.preventDefault();
+            userData = {
+                name: document.getElementById('user-name').value,
+                email: document.getElementById('user-email').value,
+                goals: document.getElementById('user-goals').value
+            };
+            document.getElementById('step-1').classList.remove('active');
+            document.getElementById('step-2').classList.add('active');
+            window.scrollTo(0,0);
+        };
+
+        function submitQuiz() {
+            document.getElementById('step-2').classList.remove('active');
+            document.getElementById('step-3').classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function setBehavior(q, val, button) {
+            behaviorData[q] = val;
+            document.querySelectorAll(`.behavior-btn-${q}`).forEach(b => {
+                b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+            });
+            button.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+        }
+
+        function calculateResults() {
+            let right = 0, wrong = 0, blank = 0;
+            let subjectStats = {};
+
+            questions.forEach(q => {
+                const sub = subjects.find(s => q.id >= s.range[0] && q.id <= s.range[1]).name;
+                if(!subjectStats[sub]) subjectStats[sub] = { r: 0, w: 0, b: 0 };
+
+                const userAns = userAnswers[q.id] || 'B';
+                if(userAns === 'B') { blank++; subjectStats[sub].b++; }
+                else if(userAns === q.ans) { right++; subjectStats[sub].r++; }
+                else { wrong++; subjectStats[sub].w++; }
+            });
+
+            const liquid = right - wrong;
+            const percent = Math.max(0, (liquid / questions.length) * 100);
+            
+            return { liquid, percent, right, wrong, blank, subjectStats };
+        }
+
+        function showResults() {
+            const timeInput = document.getElementById('time-minutes');
+            const minutes = Number(timeInput.value);
+            if (!Number.isInteger(minutes) || minutes <= 0) {
+                alert('Informe em quantos minutos você finalizou o simulado.');
+                timeInput.focus();
+                return;
+            }
+
+            const results = calculateResults();
+            document.getElementById('step-3').classList.remove('active');
+            document.getElementById('step-4').classList.add('active');
+            
+            document.getElementById('score-liquid').innerText = results.liquid;
+            document.getElementById('score-percent').innerText = results.percent.toFixed(0) + '%';
+            
+            let status = "Precisa de Reforço";
+            if(results.percent >= 80) status = "Nível Avançado";
+            else if(results.percent >= 60) status = "Nível Intermediário";
+            document.getElementById('score-status').innerText = status;
+
+            // Gráfico por Matéria
+            const ctx = document.getElementById('subjectChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(results.subjectStats),
+                    datasets: [{
+                        label: 'Nota Líquida por Matéria',
+                        data: Object.values(results.subjectStats).map(s => s.r - s.w),
+                        backgroundColor: '#3b82f6'
+                    }]
+                },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+
+            // Gabarito
+            const gList = document.getElementById('gabarito-list');
+            questions.forEach(q => {
+                const userAns = userAnswers[q.id] || 'B';
+                const isCorrect = userAns === q.ans;
+                const item = document.createElement('div');
+                item.className = `p-4 rounded-xl border-l-4 ${userAns === 'B' ? 'border-slate-300 bg-slate-50' : (isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50')}`;
+                item.innerHTML = `
+                    <p class="font-bold mb-1">${q.id}. Sua resposta: ${userAns === 'B' ? 'Branco' : (userAns === 'C' ? 'Certo' : 'Errado')} | Gabarito: ${q.ans === 'C' ? 'Certo' : 'Errado'}</p>
+                    <p class="text-sm text-slate-700">${q.exp}</p>
+                `;
+                gList.appendChild(item);
+            });
+
+            // WhatsApp Link
+            const msg = encodeURIComponent(
+                `*Bom dia, Will, segue o resultado do meu simulado:*\n\n` +
+                `*DADOS*\nNome: ${userData.name}\nEmail: ${userData.email}\nObjetivo: ${userData.goals}\n\n` +
+                `*RESULTADO*\nNota Líquida: ${results.liquid}\nAproveitamento: ${results.percent.toFixed(1)}%\nAcertos: ${results.right} | Erros: ${results.wrong} | Em branco: ${results.blank}\n\n` +
+                `*COMPORTAMENTAL*\nOrdem: ${behaviorData[1] || 'Não respondido'}\nInfluência: ${behaviorData[2] || 'Não respondido'}\nDesconforto: ${behaviorData[3] || 'Não respondido'}\nTempo: ${minutes} minutos`
+            );
+            document.getElementById('whatsapp-link').href = `https://wa.me/5524999305490?text=${msg}`;
+            
+            window.scrollTo(0,0);
+        }
+    </script>
+
+
+</body></html>
